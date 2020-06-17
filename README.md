@@ -1,4 +1,14 @@
 
+## Docs
+
+- [Ant Design Vue 文档](https://www.antdv.com/docs/vue/introduce-cn/)
+
+- [Ant Design Vue Pro（官方推荐版本）](https://github.com/vueComponent/ant-design-vue-pro)
+
+- [Vue Element Admin 源码](https://github.com/PanJiaChen/vue-element-admin)
+
+- [Vue Element Admin 文档](https://panjiachen.gitee.io/vue-element-admin-site/zh/)
+
 ## Getting started
 
 ```bash
@@ -42,9 +52,3 @@ npm run lint
 # code format check and auto fix
 npm run lint -- --fix
 ```
-
-## License
-
-[MIT](https://github.com/PanJiaChen/vue-element-admin/blob/master/LICENSE)
-
-Copyright (c) 2017-present PanJiaChen

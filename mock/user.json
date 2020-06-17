@@ -1,0 +1,12 @@
+{
+  "code": "200",
+  "data": {
+    "user": {
+      "username": "tycoding",
+      "password": "123456",
+      "avatar": "https://tycoding.cn/images/avatar.jpg",
+      "roles": ["ADMIN"]
+    }
+  },
+  "msg": "success"
+}

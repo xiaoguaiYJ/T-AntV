@@ -81,7 +81,7 @@ export default {
       this.$store.dispatch('app/toggleSideBar')
     },
     handleProfile() {
-      this.$router.push('/profile')
+      this.$router.push('/profile/index')
     },
     handleSetting() {
       this.$router.push('/profile/setting')

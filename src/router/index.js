@@ -54,16 +54,6 @@ export const constantRoutes = [
     component: () => import('@/views/login/auth-redirect'),
     hidden: true
   },
-  // {
-  //   path: '/404',
-  //   component: () => import('@/views/error-page/404'),
-  //   hidden: true
-  // },
-  // {
-  //   path: '/401',
-  //   component: () => import('@/views/error-page/401'),
-  //   hidden: true
-  // },
   {
     path: '/',
     component: Layout,
@@ -105,23 +95,31 @@ export const constantRoutes = [
     ]
   },
   {
-    path: '/test',
+    path: '/error',
     component: Layout,
-    name: 'Test',
+    // hidden: true,
     meta: {
-      title: 'Test',
+      title: 'Error Page',
       icon: 'frown'
     },
     children: [
       {
-        path: 'test01',
-        component: () => import('@/views/test/test01'),
-        name: 'test01'
+        path: '403',
+        component: () => import('@/views/error/403'),
+        name: '403',
+        meta: { title: '403' }
       },
       {
-        path: 'test02',
-        component: () => import('@/views/test/test02'),
-        name: 'test02'
+        path: '404',
+        component: () => import('@/views/error/404'),
+        name: '404',
+        meta: { title: '404' }
+      },
+      {
+        path: '500',
+        component: () => import('@/views/error/500'),
+        name: '500',
+        meta: { title: '500' }
       }
     ]
   }

@@ -1,6 +1,6 @@
 <template>
   <a-layout :class="classObj" class="app-wrapper">
-    <div v-if="device==='mobile'&&sidebar.opened" class="drawer-bg" @click="handleClickOutside" />
+    <div v-if="device === 'mobile'&&sidebar.opened" class="drawer-bg" @click="handleClickOutside" />
     <sidebar class="sidebar-container" />
     <a-layout class="main-container">
       <div :class="{'fixed-header':fixedHeader}">
@@ -60,9 +60,23 @@ export default {
     min-height: 100vh;
   }
 
+  .drawer-bg {
+    background: #000;
+    opacity: 0.3;
+    width: 100%;
+    top: 0;
+    height: 100%;
+    position: absolute;
+    z-index: 999;
+  }
+
   .hideSidebar .fixed-header {
-      width: calc(100% - 80px) !important;
-    }
+    width: calc(100% - 80px) !important;
+  }
+
+  .mobile .fixed-header{
+    width: 100% !important;
+  }
 
   .fixed-header {
     padding: 0px;

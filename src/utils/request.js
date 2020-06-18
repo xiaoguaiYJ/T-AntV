@@ -64,7 +64,7 @@ service.interceptors.response.use(
           }
         })
       }
-      return Promise.reject(new Error(res.message || 'Error'))
+      return Promise.reject(new Error(res.msg || 'Error'))
     } else {
       return res
     }
@@ -73,7 +73,7 @@ service.interceptors.response.use(
     console.log('err' + error) // for debug
     message.error(
       error.message,
-      5 * 1000
+      4
     )
     return Promise.reject(error)
   }

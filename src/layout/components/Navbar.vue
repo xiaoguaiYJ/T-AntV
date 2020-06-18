@@ -23,29 +23,37 @@
                 Github
               </a>
             </a-menu-item>
-            <a-menu-item key="Blog">
+            <a-menu-item key="blog">
               <a href="https://github.com/TyCoding" target="_blank">
                 <a-icon type="link" />
                 Blog
               </a>
             </a-menu-item>
             <a-menu-divider />
-            <a-menu-item key="center">
-              <a-icon type="user" />
+            <a-menu-item key="profile" @click="handleProfile">
+              <a-icon type="setting" />
               个人中心
             </a-menu-item>
-            <a-menu-item key="settings">
+            <a-menu-item key="settings" @click="handleSetting">
               <a-icon type="setting" />
               个人设置
             </a-menu-item>
             <a-menu-divider />
-            <a-menu-item key="logout">
+            <a-menu-item key="logout" @click="logout">
               <a-icon type="logout" />
               退出登录
             </a-menu-item>
           </a-menu>
         </template>
       </a-dropdown>
+      <a href="https://github.com/TyCoding/ant-design-vue-pro" target="_blank">
+        <a-dropdown v-if="name">
+          <span class="avatar-wrapper">
+            <a-icon type="github" :style="{ fontSize: '20px'}" />
+          </span>
+          <template v-slot:overlay />
+        </a-dropdown>
+      </a>
     </div>
   </div>
 </template>
@@ -72,9 +80,27 @@ export default {
     toggleSideBar() {
       this.$store.dispatch('app/toggleSideBar')
     },
-    async logout() {
-      await this.$store.dispatch('user/logout')
-      this.$router.push(`/login?redirect=${this.$route.fullPath}`)
+    handleProfile() {
+      this.$router.push('/profile')
+    },
+    handleSetting() {
+      this.$router.push('/profile/setting')
+    },
+    logout() {
+      this.$confirm({
+        title: '提示',
+        content: '你确定要注销当前账户？',
+        okText: '确定',
+        cancelText: '取消',
+        onOk: () => {
+          this.$store.dispatch('user/logout').then(res => {
+            this.$router.push(`/login?redirect=${this.$route.fullPath}`)
+          })
+        },
+        onCancel: () => {
+          this.$message.info('已取消注销登录', 3)
+        }
+      })
     }
   }
 }

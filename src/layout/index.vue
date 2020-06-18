@@ -60,6 +60,10 @@ export default {
     min-height: 100vh;
   }
 
+  .hideSidebar .fixed-header {
+      width: calc(100% - 80px) !important;
+    }
+
   .fixed-header {
     padding: 0px;
     width: calc(100% - 256px) !important;

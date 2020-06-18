@@ -76,6 +76,54 @@ export const constantRoutes = [
         meta: { title: 'Dashboard', icon: 'dashboard', affix: true }
       }
     ]
+  },
+  {
+    path: '/profile',
+    component: Layout,
+    hidden: true,
+    children: [
+      {
+        path: 'index',
+        component: () => import('@/views/profile/index'),
+        hidden: true
+      },
+      {
+        path: 'setting',
+        component: () => import('@/views/profile/components/setting'),
+        hidden: true
+      },
+      {
+        path: 'setting/base',
+        component: () => import('@/views/profile/components/base-set'),
+        hidden: true
+      },
+      {
+        path: 'setting/safe',
+        component: () => import('@/views/profile/components/safe-set'),
+        hidden: true
+      }
+    ]
+  },
+  {
+    path: '/test',
+    component: Layout,
+    name: 'Test',
+    meta: {
+      title: 'Test',
+      icon: 'frown'
+    },
+    children: [
+      {
+        path: 'test01',
+        component: () => import('@/views/test/test01'),
+        name: 'test01'
+      },
+      {
+        path: 'test02',
+        component: () => import('@/views/test/test02'),
+        name: 'test02'
+      }
+    ]
   }
 ]
 
@@ -84,7 +132,6 @@ export const constantRoutes = [
  * the routes that need to be dynamically loaded based on user roles
  */
 export const asyncRoutes = [
-
 
   // 404 page must be placed at the end !!!
   { path: '*', redirect: '/404', hidden: true }

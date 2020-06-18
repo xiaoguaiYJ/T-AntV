@@ -5,13 +5,13 @@
       <div>
         <a-list :split="false">
           <a-list-item>
-            <a-switch slot="actions" size="small" v-model="fixedHeader" />
+            <a-switch slot="actions" v-model="fixedHeader" />
             <a-list-item-meta>
               <div slot="title">固定 Header</div>
             </a-list-item-meta>
           </a-list-item>
           <a-list-item>
-            <a-switch slot="actions" size="small" v-model="sidebarLogo" />
+            <a-switch slot="actions" v-model="sidebarLogo" />
             <a-list-item-meta>
               <div slot="title">侧边栏 Logo</div>
             </a-list-item-meta>

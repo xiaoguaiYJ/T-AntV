@@ -1,5 +1,5 @@
 <template>
-  <div class="page-header-index-wide page-header-wrapper-grid-content-main">
+  <div class="app-container page-header-index-wide page-header-wrapper-grid-content-main">
     <a-row :gutter="24">
       <a-col :md="24" :lg="7">
         <a-card :bordered="false">
@@ -7,8 +7,8 @@
             <div class="avatar">
               <img :src="avatar">
             </div>
-            <div class="username">{{ nickname }}</div>
-            <div class="bio">海纳百川，有容乃大</div>
+            <div class="username">{{ name }}</div>
+            <div class="bio">兴趣使然的Coder</div>
           </div>
           <div class="account-center-detail">
             <p>
@@ -24,17 +24,31 @@
             </p>
           </div>
           <a-divider />
+          <div class="account-tags">
+            <div class="account-tags-title">标签</div>
+            <a-tag>中二</a-tag>
+            <a-tag><a href="https://tycoding.cn">Coder</a></a-tag>
+            <a-tag closable>
+              摸鱼
+            </a-tag>
+          </div>
         </a-card>
       </a-col>
       <a-col :md="24" :lg="17">
         <a-card
           style="width:100%"
-          :bordered="false"
-          :tab-list="tabListNoTitle"
-          :active-tab-key="noTitleKey"
-          @tabChange="key => handleTabChange(key, 'noTitleKey')"
-        >
-          Card
+          :bordered="false">
+          <a-tabs default-active-key="1">
+            <a-tab-pane key="1" tab="Tab 1">
+              Content of Tab Pane 1
+            </a-tab-pane>
+            <a-tab-pane key="2" tab="Tab 2" force-render>
+              Content of Tab Pane 2
+            </a-tab-pane>
+            <a-tab-pane key="3" tab="Tab 3">
+              Content of Tab Pane 3
+            </a-tab-pane>
+          </a-tabs>
         </a-card>
       </a-col>
     </a-row>
@@ -42,7 +56,6 @@
 </template>
 
 <script>
-import { PageView, RouteView } from '@/layouts'
 
 import { mapGetters } from 'vuex'
 
@@ -93,6 +106,14 @@ export default {
         line-height: 28px;
         font-weight: 500;
         margin-bottom: 4px;
+      }
+    }
+
+    .account-tags{
+      .account-tags-title{
+        margin-bottom: 12px;
+        color: rgba(0,0,0,.85);
+        font-weight: 500;
       }
     }
 

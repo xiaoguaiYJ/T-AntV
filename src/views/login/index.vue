@@ -105,6 +105,7 @@ export default {
   },
   methods: {
     handleLogin() {
+      this.loading = true
       this.$refs.ruleForm.validate(valid => {
         if (valid) {
           this.$store.dispatch('user/login', this.form)

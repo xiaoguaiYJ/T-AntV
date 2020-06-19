@@ -10,7 +10,7 @@ based on  <a href="https://vuecomponent.github.io/ant-design-vue/docs/vue/introd
 
 本项目基于[vue-element-admin](https://github.com/PanJiaChen/vue-element-admin)开发， 请开发者先阅读[vue-element-admin文档](https://panjiachen.gitee.io/vue-element-admin-site/zh/)。
 
-本项目为解决后端开发者使用Element时组件太少的尴尬，Ant-design也有Vue版本，但是Antv官方并没有写Pro版本后台管理系统。Antv官方推荐了[vue-design-vue-pro (@sendya)](https://github.com/vueComponent/ant-design-vue-pro)版本， 但相比vue-element-admin，我觉得封装的并不是很友好（个人看法），于是诞生了本项目。
+本项目为解决后端开发者使用Element时组件太少的尴尬。Ant-design也有Vue版本：[vue-design-vue-pro (@sendya)](https://github.com/vueComponent/ant-design-vue-pro)
 
 本项目在vue-element-admin的基础上将组件完全替换为AntV， 当然Api肯定会有不同，但项目中对于vue-router、axios、vuex的封装基本相同。
 
@@ -78,12 +78,6 @@ npm run build:stage
 # build for production environment
 npm run build:prod
 ```
-
-## Donation
-
-| Alipay                                                     | WechatPay                                                  |
-| ---------------------------------------------------------- | ---------------------------------------------------------- |
-| ![alipay_258px](http://cdn.tycoding.cn/20200610132929.png) | ![wechat_258px](http://cdn.tycoding.cn/20200610132940.png) |
 
 ## Contact
 

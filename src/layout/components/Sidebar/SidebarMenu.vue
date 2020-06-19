@@ -1,24 +1,25 @@
 <template>
-  <a-menu theme="dark" mode="inline" :default-selected-keys="active">
+  <a-menu theme="dark" mode="inline" :default-selected-keys="active" :open-keys.sync="openKeys">
     <template v-for="item in routes">
       <a-menu-item
         v-if="!item.hidden &&
           hasOneShowingChild(item.children,item) && (!onlyOneChild.children||onlyOneChild.noShowingChildren)&&!item.alwaysShow && onlyOneChild.meta "
-        :key="resolvePath(item.path)"
+        :key="resolvePath(item.path, onlyOneChild.path)"
       >
-        <app-link :to="resolvePath(onlyOneChild.path)">
+        <app-link :to="resolvePath(item.path, onlyOneChild.path)">
           <a-icon :type="onlyOneChild.meta.icon" />
           {{ onlyOneChild.meta.title }}
         </app-link>
       </a-menu-item>
-      <a-sub-menu v-if="!item.hidden && item.meta" :key="resolvePath(item.path)">
+      <a-sub-menu v-if="!item.hidden && item.meta" :key="item.path">
         <span v-if="item.meta" slot="title">
           <a-icon :type="item.meta && item.meta.icon" />
           <span>{{ item.meta.title }}</span>
         </span>
+        <!-- 应该将<a-menu-item>分离出来才能实现三级及以上目录的渲染，当前这样写只能渲染两级目录  -->
         <a-menu-item
           v-for="child in item.children"
-          :key="child.path"
+          :key="resolvePath(item.path, child.path)"
           @click="toPath(item.path, child.path)"
         >
           {{ child.name }}
@@ -53,7 +54,16 @@ export default {
   },
   data() {
     this.onlyOneChild = null
-    return {}
+    return {
+      openKeys: []
+    }
+  },
+  created() {
+    console.log(this.routes)
+    // 设置默认展开submenu的Key，这种方式也许并不友好，如果有好的方式再修改
+    const route = this.$route
+    const { matched } = route
+    this.openKeys = [matched[0].path]
   },
   methods: {
     // SideBar Item Router jump
@@ -84,11 +94,11 @@ export default {
 
       return false
     },
-    resolvePath(routePath) {
+    resolvePath(basePath, routePath) {
       if (isExternal(routePath)) {
         return routePath
       }
-      return path.resolve(routePath)
+      return path.resolve(basePath, routePath)
     }
   }
 }

@@ -1,7 +1,7 @@
 <template>
   <a-layout-sider v-model="isCollapse" width="256px" :trigger="null" collapsible>
     <logo v-if="showLogo" :collapse="isCollapse" />
-    <sidebar-menu :routes="permission_routes" :active="[activeMenu]" />
+    <sidebar-menu :routes="permission_routes" :active="[activeMenu]"/>
   </a-layout-sider>
 </template>
 

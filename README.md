@@ -36,14 +36,16 @@ based on  <a href="https://vuecomponent.github.io/ant-design-vue/docs/vue/introd
 
 - [Vue Element Admin 文档](https://panjiachen.gitee.io/vue-element-admin-site/zh/)
 
+
+
 ## Getting started
 
 ```bash
 # clone the project
-git clone https://github.com/PanJiaChen/vue-element-admin.git
+git clone https://github.com/TyCoding/ant-design-vue-pro.git
 
 # enter the project directory
-cd vue-element-admin
+cd ant-design-vue-pro
 
 # install dependency
 npm install

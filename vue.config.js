@@ -83,6 +83,15 @@ module.exports = {
       })
       .end()
 
+    config.module
+      .rule('js')
+      .test(/\.js$/)
+      .include.add(resolve('src')).add(resolve('test'))
+      .end()
+      .use('babel-loader')
+      .loader('babel-loader')
+      .end()
+
     config
       .when(process.env.NODE_ENV !== 'development',
         config => {

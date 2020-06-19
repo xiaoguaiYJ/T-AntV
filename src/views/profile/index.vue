@@ -37,7 +37,8 @@
       <a-col :md="24" :lg="17">
         <a-card
           style="width:100%"
-          :bordered="false">
+          :bordered="false"
+        >
           <a-tabs default-active-key="1">
             <a-tab-pane key="1" tab="Tab 1">
               Content of Tab Pane 1

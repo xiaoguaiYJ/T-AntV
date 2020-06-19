@@ -59,7 +59,6 @@ export default {
     }
   },
   created() {
-    console.log(this.routes)
     // 设置默认展开submenu的Key，这种方式也许并不友好，如果有好的方式再修改
     const route = this.$route
     const { matched } = route

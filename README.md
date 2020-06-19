@@ -11,6 +11,16 @@ based on  <a href="https://vuecomponent.github.io/ant-design-vue/docs/vue/introd
 
 本项目在vue-element-admin的基础上将组件完全替换为AntV， 当然Api肯定会有不同，但项目中对于vue-router、axios、vuex的封装基本相同。
 
+## Issues
+
+由于本人是Java后端，对JS并不是很了解，因此此项目中还存在一些问题，希望前后端爱好者能积极参与到这个项目中，或者联系我商讨一些问题的解决方案。
+
+**目前已知的问题：**
+
+1. 注销登录不知为何（洁癖）：`"TypeError: Cannot read property 'removeChild' of null"`
+2. SideBar不能使用svg定义图标。原作者是依赖`el-icon`作为与svg的名称区分，在本项目中无奈我直接移除了
+3. SideBar不能实现多层级路由（三级以上路由渲染不了），具体看`、src/layout/Sidebar/SidebarMenu`组件。主要是因为原Element和AntV中`<menu>`组件的区别较大（这个问题如果有解决办法请及时联系我）。
+
 ## Features
 
 - 提供最简洁的脚手架项目

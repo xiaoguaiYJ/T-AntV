@@ -2,7 +2,9 @@
 <div align="center">
 based on  <a href="https://vuecomponent.github.io/ant-design-vue/docs/vue/introduce-cn/" target="_blank">Ant Design of Vue</a> & <a href="https://github.com/PanJiaChen/vue-element-admin" target="_blank">Vue Element Admin</a>
 </div>
-**Preview:** [http://antv.tycoding.cn/](http://antv.tycoding.cn/)
+
+
+**Preview:**  [http://antv.tycoding.cn/](http://antv.tycoding.cn/)
 
 ## Introduce
 

@@ -7,11 +7,6 @@
           是基于<a :href="elementUrl" target="_blank">vue-element-admin</a>开发的，
           请开发者先阅读<a :href="elementDocUrl" target="_blank">vue-element-admin项目文档。</a>
           <br>
-          本项目为解决后端开发者使用Element时组件太少的尴尬，Ant-design也有Vue版本，但是Antv官方并没有写Pro版本后台管理系统
-          <br>
-          Antv官方推荐了<a :href="antvpUrl" target="_blank">vue-design-vue-pro (@sendya)</a>版本，
-          但相比<a :href="elementUrl" target="_blank">vue-element-admin</a>，我觉得封装的并不是很友好（个人看法），于是诞生了本项目。
-          <br>
           本项目在<a :href="elementUrl" target="_blank">vue-element-admin</a>的基础上将组件完全替换为AntV，
           当然Api肯定会有不同，但项目中对于vue-router、axios、vuex的封装基本相同。
         </a-collapse-panel>

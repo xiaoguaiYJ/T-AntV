@@ -10,10 +10,6 @@ based on  <a href="https://vuecomponent.github.io/ant-design-vue/docs/vue/introd
 
 本项目基于[vue-element-admin](https://github.com/PanJiaChen/vue-element-admin)开发， 请开发者先阅读[vue-element-admin文档](https://panjiachen.gitee.io/vue-element-admin-site/zh/)。
 
-本项目为解决后端开发者使用Element时组件太少的尴尬。Ant-design也有Vue版本：[vue-design-vue-pro (@sendya)](https://github.com/vueComponent/ant-design-vue-pro)
-
-本项目在vue-element-admin的基础上将组件完全替换为AntV， 当然Api肯定会有不同，但项目中对于vue-router、axios、vuex的封装基本相同。
-
 ## Issues
 
 由于本人是Java后端，对JS并不是很了解，因此此项目中还存在一些问题，希望前后端爱好者能积极参与到这个项目中，或者联系我商讨一些问题的解决方案。

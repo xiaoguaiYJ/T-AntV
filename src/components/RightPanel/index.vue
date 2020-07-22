@@ -6,7 +6,6 @@
       :closable="false"
       :visible="visible"
       :drawer-style="{ position: 'absolute' }"
-      style="position: absolute"
       @close="onClose"
     >
       <slot />
@@ -29,6 +28,7 @@ export default {
       visible: false
     }
   },
+  watch: {},
   methods: {
     showDrawer() {
       this.visible = true

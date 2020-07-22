@@ -1,5 +1,5 @@
 <template>
-  <a-layout :class="classObj" class="app-wrapper">
+  <a-layout :class="classObj" class="app-wrapper" style="min-height: 100vh">
     <div v-if="device === 'mobile'&&sidebar.opened" class="drawer-bg" @click="handleClickOutside" />
     <sidebar class="sidebar-container" />
     <a-layout class="main-container">

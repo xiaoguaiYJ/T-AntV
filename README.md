@@ -3,9 +3,6 @@
 based on  <a href="https://vuecomponent.github.io/ant-design-vue/docs/vue/introduce-cn/" target="_blank">Ant Design of Vue</a> & <a href="https://github.com/PanJiaChen/vue-element-admin" target="_blank">Vue Element Admin</a>
 </div>
 
-
-**Preview:**  [http://antv.tycoding.cn/](http://antv.tycoding.cn/)
-
 ## Introduce
 
 本项目基于[vue-element-admin](https://github.com/PanJiaChen/vue-element-admin)开发， 请开发者先阅读[vue-element-admin文档](https://panjiachen.gitee.io/vue-element-admin-site/zh/)。
@@ -35,16 +32,14 @@ based on  <a href="https://vuecomponent.github.io/ant-design-vue/docs/vue/introd
 
 - [Vue Element Admin 文档](https://panjiachen.gitee.io/vue-element-admin-site/zh/)
 
-
-
 ## Getting started
 
 ```bash
 # clone the project
-git clone https://github.com/TyCoding/ant-design-vue-pro.git
+git clone https://github.com/Tumo-Team/T-AntV.git
 
 # enter the project directory
-cd ant-design-vue-pro
+cd T-AntV
 
 # install dependency
 npm install
@@ -64,6 +59,20 @@ npm run build:stage
 # build for production environment
 npm run build:prod
 ```
+
+## Preview
+
+![截屏2020-08-07 下午3.52.06](http://cdn.tycoding.cn/20200807155213.png)
+
+![截屏2020-08-07 下午3.52.33](http://cdn.tycoding.cn/20200807155237.png)
+
+![截屏2020-08-07 下午3.52.47](http://cdn.tycoding.cn/20200807155250.png)
+
+![截屏2020-08-07 下午3.53.06](http://cdn.tycoding.cn/20200807155308.png)
+
+![截屏2020-08-07 下午3.53.32](http://cdn.tycoding.cn/20200807155334.png)
+
+![截屏2020-08-07 下午3.53.49](http://cdn.tycoding.cn/20200807155351.png)
 
 ## Contact
 

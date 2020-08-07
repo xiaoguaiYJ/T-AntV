@@ -74,7 +74,7 @@ export const constantRoutes = [
     path: 'external-link',
     children: [
       {
-        path: 'https://github.com/PanJiaChen/vue-element-admin',
+        path: 'https://github.com/Tumo-Team/T-AntV',
         meta: { title: 'External Link', icon: 'link' }
       }
     ]

@@ -1,41 +1,22 @@
 <template>
   <a-layout-sider v-model="isCollapse" width="256px" :trigger="null" collapsible>
     <logo v-if="showLogo" :collapse="isCollapse" />
-    <a-menu
-      v-model="selectedKeys"
-      mode="inline"
-      theme="dark"
-      :inline-collapsed="isCollapse"
-      :open-keys="openKeys"
-      @openChange="onOpenChange"
-    >
-      <template v-for="item in permission_routes">
-        <template v-if="hasOneShowingChild(item.children,item) && (!onlyOneChild.children||onlyOneChild.noShowingChildren)&&!item.alwaysShow">
-          <a-menu-item v-if="onlyOneChild.meta" :key="item.path" :index="resolvePath(onlyOneChild.path)">
-            <app-link :to="onlyOneChild.path">
-              <a-icon :type="onlyOneChild.meta.icon" />
-              {{ onlyOneChild.meta.title }}
-            </app-link>
-          </a-menu-item>
-        </template>
-        <sub-menu v-else :key="item.path" :menu-info="item" />
-      </template>
-    </a-menu>
+    <s-menu :collapsed="isCollapse" :menu="permission_routes" style="padding: 16px 0px;" @select="onSelect" />
   </a-layout-sider>
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
 import Logo from './Logo'
-import SubMenu from './SubMenu'
-import AppLink from './Link'
 import variables from '@/styles/variables.less'
 import path from 'path'
+import SMenu from './Menu/index'
 import { isExternal } from '@/utils/validate'
 
 export default {
   components: {
-    AppLink, SubMenu, Logo
+    Logo,
+    SMenu
   },
   data() {
     this.onlyOneChild = null
@@ -69,6 +50,9 @@ export default {
     }
   },
   methods: {
+    onSelect(obj) {
+      this.$emit('menuSelect', obj)
+    },
     onOpenChange(openKeys) {
       this.openKeys = openKeys
     },

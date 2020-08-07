@@ -10,15 +10,6 @@ based on  <a href="https://vuecomponent.github.io/ant-design-vue/docs/vue/introd
 
 本项目基于[vue-element-admin](https://github.com/PanJiaChen/vue-element-admin)开发， 请开发者先阅读[vue-element-admin文档](https://panjiachen.gitee.io/vue-element-admin-site/zh/)。
 
-## Issues
-
-由于本人是Java后端，对JS并不是很了解，因此此项目中还存在一些问题，希望前后端爱好者能积极参与到这个项目中，或者联系我商讨一些问题的解决方案。
-
-**目前已知的问题：**
-
-2. SideBar不能使用svg定义图标。原作者是依赖`el-icon`作为与svg的名称区分，在本项目中无奈我直接移除了
-3. SideBar不能实现多层级路由（三级以上路由渲染不了），具体看`src/layout/Sidebar/SidebarMenu`组件。主要是因为原Element和AntV中`<menu>`组件的区别较大（这个问题如果有解决办法请及时联系我）。
-
 ## Features
 
 - 提供最简洁的脚手架项目
@@ -27,7 +18,7 @@ based on  <a href="https://vuecomponent.github.io/ant-design-vue/docs/vue/introd
 
 本人能力有限，欢迎大家对项目二次封装，或提issue、pr。
 
-项目文档正在写，请关注公众号**程序员涂陌**第一时间获取项目文档~
+欢迎关注我的微信公众号：**程序员涂陌**
 
 | 程序员涂陌                                                  |
 | ----------------------------------------------------------- |

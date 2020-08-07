@@ -71,6 +71,15 @@ export const constantRoutes = [
     ]
   },
   {
+    path: 'external-link',
+    children: [
+      {
+        path: 'https://github.com/PanJiaChen/vue-element-admin',
+        meta: { title: 'External Link', icon: 'link' }
+      }
+    ]
+  },
+  {
     path: '/profile',
     component: Layout,
     hidden: true,

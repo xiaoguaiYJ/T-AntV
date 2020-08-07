@@ -2,7 +2,7 @@
   <div class="login-container">
     <div class="login-weaper animated bounceInDown">
       <div class="login-logo">
-        <img src="favicon.ico" alt>
+        <svg-icon icon-class="logo" style="width: 74px;height: 77px;" />
       </div>
       <div class="login-tip">
         Ant Design Pro

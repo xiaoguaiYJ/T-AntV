@@ -7,6 +7,8 @@ based on  <a href="https://vuecomponent.github.io/ant-design-vue/docs/vue/introd
 
 本项目基于[vue-element-admin](https://github.com/PanJiaChen/vue-element-admin)开发， 请开发者先阅读[vue-element-admin文档](https://panjiachen.gitee.io/vue-element-admin-site/zh/)。
 
+**在线预览：** [http://antv.tycoding.cn](http://antv.tycoding.cn)
+
 ## Features
 
 - 提供最简洁的脚手架项目

@@ -3,11 +3,11 @@
     <transition name="sidebarLogoFade">
       <router-link v-if="collapse" key="collapse" class="sidebar-logo-link" to="/">
         <svg-icon v-if="logo" icon-class="logo" style="width: 32px;height: 32px;" class="sidebar-logo" />
-        <h1 v-else class="sidebar-title">{{ title }} </h1>
+        <h1 v-else :class="'sidebar-title ' + theme">{{ title }} </h1>
       </router-link>
       <router-link v-else key="expand" class="sidebar-logo-link" to="/">
         <svg-icon v-if="logo" icon-class="logo" style="width: 32px;height: 32px;" class="sidebar-logo" />
-        <h1 class="sidebar-title">{{ title }} </h1>
+        <h1 :class="'sidebar-title ' + theme">{{ title }} </h1>
       </router-link>
     </transition>
   </div>
@@ -20,6 +20,11 @@ export default {
     collapse: {
       type: Boolean,
       required: true
+    },
+    theme: {
+      type: String,
+      required: false,
+      default: 'dark'
     }
   },
   data() {
@@ -63,12 +68,17 @@ export default {
     & .sidebar-title {
       display: inline-block;
       margin: 0;
-      color: #fff;
       font-weight: 600;
       line-height: 50px;
       font-size: 21px;
       font-family: Avenir, Helvetica Neue, Arial, Helvetica, sans-serif;
       vertical-align: middle;
+    }
+    & .sidebar-title.dark {
+      color: #fff
+    }
+    & .sidebar-title.light {
+      color: #1890ff
     }
   }
 

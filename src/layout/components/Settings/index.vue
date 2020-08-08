@@ -1,6 +1,14 @@
 <template>
   <div class="setting-drawer-index-content">
     <div :style="{ marginBottom: '24px' }">
+      <h3 class="setting-drawer-index-title">菜单主题</h3>
+      <a-radio-group v-model="theme">
+        <a-radio :value="'dark'">Dark</a-radio>
+        <a-radio :value="'light'">Light</a-radio>
+      </a-radio-group>
+    </div>
+    <a-divider />
+    <div :style="{ marginBottom: '24px' }">
       <h3 class="setting-drawer-index-title">其他设置</h3>
       <div>
         <a-list :split="false">
@@ -55,6 +63,17 @@ export default {
       set(val) {
         this.$store.dispatch('settings/changeSetting', {
           key: 'sidebarLogo',
+          value: val
+        })
+      }
+    },
+    theme: {
+      get() {
+        return this.$store.state.settings.theme
+      },
+      set(val) {
+        this.$store.dispatch('settings/changeSetting', {
+          key: 'theme',
           value: val
         })
       }
